@@ -25,4 +25,10 @@ export class AppComponent implements OnInit{
     this.summ += this.deck[random].value;
     this.deck.splice(random, 1);
   }
+
+  onReset() {
+    this.cardsOnTable = [];
+    this.summ = 0;
+    this.deck = this.cardsService.getDeck();
+  }
 }
