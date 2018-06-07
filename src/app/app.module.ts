@@ -2,15 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { CardItemComponent } from './card-item/card-item.component';
+import { CardItemComponent } from './black-jack/card-item/card-item.component';
 import {CardsService} from './services/cards.service';
-import { MenuBarComponent } from './menu-bar/menu-bar.component';
+import { MenuBarComponent } from './black-jack/menu-bar/menu-bar.component';
+import { BlackJackComponent } from './black-jack/black-jack.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardItemComponent,
-    MenuBarComponent
+    MenuBarComponent,
+    BlackJackComponent
   ],
   imports: [
     BrowserModule

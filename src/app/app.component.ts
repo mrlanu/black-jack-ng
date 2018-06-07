@@ -1,7 +1,4 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {CardModel} from './card.model';
-import {CardsService} from './services/cards.service';
-import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,24 +6,10 @@ import {Subscription} from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, OnDestroy {
-  subscription: Subscription;
-  cardsOnTable: CardModel[] = [];
-
-  constructor(private cardsService: CardsService) {}
-
-  ngOnInit() {
-    this.subscription = this.cardsService.cardAdded.subscribe(
-      (cards: CardModel[]) => {
-        this.cardsOnTable = cards;
-      }
-    );
+  ngOnInit(): void {
   }
 
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
+  ngOnDestroy(): void {
   }
 
-  onReset() {
-    this.cardsService.startGame();
-  }
 }
