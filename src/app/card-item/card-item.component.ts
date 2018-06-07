@@ -7,7 +7,7 @@ import {CardModel} from '../card.model';
   styleUrls: ['./card-item.component.css']
 })
 export class CardItemComponent implements OnInit {
-  myLeft = 50;
+  myLeft = -70;
   @Input() card: CardModel;
   @Input() index: number;
 

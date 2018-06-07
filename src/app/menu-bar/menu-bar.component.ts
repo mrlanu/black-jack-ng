@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CardsService} from '../services/cards.service';
+import {Time} from '@angular/common';
 
 @Component({
   selector: 'app-menu-bar',
@@ -18,6 +19,12 @@ export class MenuBarComponent implements OnInit {
   onBet() {
     this.first = 'addCard';
     this.cardsService.startGame();
+    setTimeout(() => {
+      this.onAddCard();
+    }, 300);
+    setTimeout(() => {
+      this.onAddCard();
+    }, 600);
   }
 
   onAddCard() {
