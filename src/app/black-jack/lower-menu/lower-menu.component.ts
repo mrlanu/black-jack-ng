@@ -1,13 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {CardsService} from '../../services/cards.service';
-import {Time} from '@angular/common';
 
 @Component({
-  selector: 'app-menu-bar',
-  templateUrl: './menu-bar.component.html',
-  styleUrls: ['./menu-bar.component.css']
+  selector: 'app-lower-menu',
+  templateUrl: './lower-menu.component.html',
+  styleUrls: ['./lower-menu.component.css']
 })
-export class MenuBarComponent implements OnInit {
+export class LowerMenuComponent implements OnInit {
   first = 'bet';
   hasCard = true;
 

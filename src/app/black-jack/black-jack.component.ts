@@ -26,7 +26,4 @@ export class BlackJackComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
-  onReset() {
-    this.cardsService.startGame();
-  }
 }

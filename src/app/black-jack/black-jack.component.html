@@ -1,14 +1,19 @@
 <div class="container">
   <br>
-  <div class="row">
-    <div class="col-sm-12">
-      <button class="btn btn-danger float-right" (click)="onReset()">Reset</button>
-    </div>
-  </div>
+   <app-upper-menu></app-upper-menu>
+
   <hr>
+
   <div class="row">
-    <div class="col-sm-12">
-      <img src="assets/img/cards/back/back.png" alt="fuck" style="max-height: 170px">
+    <div class="col-sm-5">
+      <app-card-item
+        *ngFor="let card of cardsOnTable; let i = index"
+        [card]="card"
+        [index]="i"
+        style="position: absolute;"></app-card-item>
+    </div>
+    <div class="col-sm-7">
+      <img src="assets/img/cards/back/back.png" alt="fuck" style="max-height: 170px; position: relative; left: -20px">
       <app-card-item
         *ngFor="let card of cardsOnTable; let i = index"
         [card]="card"
@@ -16,11 +21,9 @@
         style="position: absolute;"></app-card-item>
     </div>
   </div>
+
   <hr>
-  <div class="row">
-    <div class="col-sm-12">
-      <app-menu-bar></app-menu-bar>
-    </div>
-  </div>
+
+      <app-lower-menu></app-lower-menu>
 </div>
 
