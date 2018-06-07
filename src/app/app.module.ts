@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CardItemComponent } from './card-item/card-item.component';
 import {CardsService} from './services/cards.service';
+import { MenuBarComponent } from './menu-bar/menu-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardItemComponent
+    CardItemComponent,
+    MenuBarComponent
   ],
   imports: [
     BrowserModule
